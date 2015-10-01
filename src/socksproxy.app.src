@@ -1,0 +1,12 @@
+{application, socksproxy,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, [socksproxy_sup]},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { socksproxy_app, []}},
+  {env, []}
+ ]}.
