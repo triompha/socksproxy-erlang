@@ -31,6 +31,7 @@ init([Socks5LSock]) ->
 			temporary, brutal_kill, worker, 
 			[socksproxy_child]},
 
-	
+    %simple_one_for_one:需要自己挂载子节点，temporary:不重启
+	%0,1:每1秒限制0次重启，即不让重启
     {ok, { {simple_one_for_one, 0, 1}, [Child]} }.
 
